@@ -1,0 +1,8 @@
+{% for book in books %}
+<div class="book">
+    <img src="{{ book.imageLink }}" alt="{{ book.title }} cover" />
+    <h2>{{ book.title }}</h2>
+    <p><strong>Authors:</strong> {{ book.authors | join(', ') }}</p>
+    <p><strong>Published:</strong> {{ book.publishedDate }}</p>
+</div>
+{% endfor %}

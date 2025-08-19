@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}" />
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js" integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header><h1>Book Explorer</h1></header>
+    <div class="search">
+      
+        <input
+        type="search"
+        name="title"
+        id="search"
+        placeholder="Search for a book"
+        hx-get="/api/books/search"
+        hx-trigger="keyup changed delay:300ms"
+        hx-target="#books"
+        hx-indicator=".loading-spinner"
+      />
+      
+      <button><span class="search-icon">🔍</span></button>
+    </div>
+    <main>
+      <div class="loading-spinner" style="display: none">Loading...</div>
+      <div class="books" id="books">{% include "books.html"%}</div>
+    </main>
+  </body>
+</html>

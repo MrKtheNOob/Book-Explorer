@@ -1,0 +1,51 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+ }
+
+ header {
+   background-color: rgb(21, 140, 180);
+   height: 5em;
+   padding: 10px;
+   text-align: center;
+ }
+
+ h1 {
+   color: white;
+   text-align: center;
+ }
+
+ .search {
+    margin-top: 2em;
+   display: flex;
+   justify-content: center; 
+   height: min-content;
+ }
+
+ .search input {
+    padding:0.2em;
+    font-size: 2em;
+    width: 50%;
+ }
+ .search button{
+  width: max-content;
+  
+ }
+
+ .books {
+   display: grid;
+   padding: 3em;
+   grid-template-columns: repeat(auto-fill, minmax(20em,1fr));
+   justify-content: center;
+ }
+
+ .book {
+   padding: 1em;
+   word-wrap: normal;
+   border: 2px solid rgb(21, 140, 180);
+ }
+ .hide{
+  display:none
+ }

@@ -1,0 +1,4 @@
+the goal is to implement crud but instead of todo its gonna be books 
+and I also want a search bar to look for those books 
+the books data will be json with name, author , picture of cover
+

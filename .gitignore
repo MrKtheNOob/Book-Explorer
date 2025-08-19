@@ -1,0 +1,4 @@
+venv/
+privatekey.json
+pipeline.ipynb
+/pycache/
